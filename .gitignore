@@ -1,0 +1,5 @@
+# Ignore local environment files containing sensitive credentials
+.env
+.env.local
+.env.*.local
+*.env
