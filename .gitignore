@@ -3,3 +3,11 @@
 .env.local
 .env.*.local
 *.env
+
+
+
+
+# Ignore virtual environment
+venv/
+.venv/
+ENV/
