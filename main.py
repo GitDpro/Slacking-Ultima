@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
 import requests
 
 import re
@@ -166,7 +169,41 @@ def handle_calc(ack,respond,command):
         respond("You can't divide by Zero!")
     except Exception:
         respond("Invalid maths expression!")
-        
+
+
+TimeZones= {
+    "🇺🇸 US Pacific (SF / Seattle)": "America/Los_Angeles",
+    "🇺🇸 US Eastern (NY / DC)": "America/New_York",
+    "🇬🇧 UTC / UK (London)": "Europe/London",
+    "🇪🇺 Central Europe (Berlin / Paris)": "Europe/Berlin",
+    "🇮🇳 India (IST)": "Asia/Kolkata",
+    "🇯🇵 Japan (Tokyo)": "Asia/Tokyo",
+    "🇦🇺 Australia (Sydney)": "Australia/Sydney",
+}
+
+@app.command("/ultima-tz")
+def handle_time(ack,respond):
+    ack()
+    
+    lines = []
+    for label, tz_str in TimeZones.items():
+        now = datetime.now(ZoneInfo(tz_str))
+        formatted_time = now.strftime("%I:%M %p %Z (%b %d)")
+        lines.append(f"• *{label}:* `{formatted_time}`")
+    
+    respond(
+        blocks = [
+            {
+            "type": "header",
+            "text": {"type": "plain_text", "text": "🌍 Ultima Team World Clock"}
+        },
+        {
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": "\n".join(lines)}
+        }
+        ]
+    )
+    
     
             
 if __name__ == "__main__":

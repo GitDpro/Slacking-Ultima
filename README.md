@@ -8,3 +8,5 @@ Slacking Ultima is your all-in-one Utility & Fun bot, built to bring versatile t
 * /ultima-roll - Rolls a number 
 * /ultima-joke - Tells you a random dad joke 😂
 * /ultima-calc [Calculation Input] 🔢
+* /ultima-rps - Play Rock paper scissors with the bot! 🖐️ 
+* /ultima-tz - Gets the timezone ⏳
