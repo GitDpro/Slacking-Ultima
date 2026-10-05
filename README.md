@@ -1,5 +1,6 @@
 # Slacking Ultima
 Slacking Ultima is your personal slack bot that runs 24/7 using PM2 on Hack Club Nest , built in python (Bolt) framework + Socket Mode, Made for your community to bring them closer together and assist them daily! 
+
 ⭐🌟**FEATURES**🌟⭐
 
 * /ultima-hello - Says Hello 💖
