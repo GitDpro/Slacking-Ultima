@@ -12,6 +12,6 @@ Here's what it can do!
 * /ultima-rps - Play Rock paper scissors with the bot! 🖐️ 
 * /ultima-tz - Gets the timezone ⏳
 
-
+Try the bot here https://join.slack.com/t/codingspace-yhb5067/shared_invite/zt-4bhexrl90-feBU5o2sRsrMyi181qFuvw
 
 -Made by GitDpro (A Human)
