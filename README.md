@@ -17,6 +17,6 @@ Here is some of the **Commands** which you can run!
 I plan on maybe adding more commands in the future :)
 
 
-*You can test it here* https://join.slack.com/t/codingspace-yhb5067/shared_invite/zt-4bhexrl90-feBU5o2sRsrMyi181qFuvw
+
 
 Created By GitDpro
